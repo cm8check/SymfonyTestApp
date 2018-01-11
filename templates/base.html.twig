@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Symfony App</title>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div id="navid" style="display: none">{{ navid }}</div>
+
+        <div class="container">
+            <header>
+                <h1>Symfony App</h1>
+            </header>
+        </div>
+
+        <nav>
+            <div class="container">
+                <div id="nav-dropdown-button">
+                    <span class="float-right"><a href="#" onclick="toggleNavDropdown()"><i class="material-icons">menu</i></a></span>
+                </div>
+                
+                <div id="nav-links">
+                    <span><a href="{{ path('index') }}">Home</a></span>
+                    <span><a href="{{ path('about') }}">About</a></span>
+                    <span><a href="{{ path('pricing') }}">Pricing</a></span>
+                    <span><a href="/contact">Contact</a></span>
+
+                    <span class="float-right"><a href="/login">Login</a></span>
+                    <span class="float-right"><a href="/register">Register</a></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+        </div>
+
+        <script src="{{ asset('scripts/main.js') }}"></script>
+    </body>
+</html>
