@@ -5,7 +5,51 @@
     This is a banner which will display some attention-grabbing information!
 </div>
 
-<p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam corporis sapiente doloribus ut sit illo maxime autem minus ipsam dolor pariatur excepturi quod sint tempore explicabo odit aut exercitationem omnis harum libero tempora quos, reiciendis nesciunt! Dolores culpa tempora, eaque aspernatur quas a architecto quisquam numquam consequatur beatae quidem. Nisi doloremque repellat quo animi libero vero odit, nesciunt beatae sapiente id quisquam impedit facere cum quis molestias laboriosam corporis pariatur deserunt tempora dolorum autem suscipit labore totam dolorem! Quis blanditiis quod, dignissimos minima consequuntur incidunt. Eos tempora eligendi tenetur deserunt atque facere dolores omnis velit obcaecati aliquam reprehenderit earum quasi, suscipit ad similique saepe vitae sunt unde hic debitis libero mollitia recusandae quod veniam. Voluptas quasi sequi obcaecati cumque soluta, tempora vero quis fugit necessitatibus at? Laborum odit asperiores deserunt sed magni et, possimus tempora. Totam obcaecati debitis maiores nemo reiciendis id quia fugiat autem libero est, voluptates culpa quibusdam exercitationem, voluptatibus quidem amet. Aliquid ex laboriosam impedit rerum deleniti atque facere fuga fugit voluptatum, blanditiis quia debitis officia aut corrupti reiciendis asperiores exercitationem pariatur cupiditate. Nam ipsam doloribus minima totam, sunt inventore sequi aliquid nesciunt, saepe consectetur temporibus distinctio dolore minus magni illum nostrum. Repellat, earum. Sed, consectetur voluptate!
-</p>
+<div class="index-grid-wrapper">
+    <div>
+        <h2>Welcome to SymfonyApp!</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat provident molestias illo in, deserunt quis error? Iusto eius quos dolore tenetur non earum voluptatum molestiae explicabo eum, quas id veritatis maiores deserunt sed at ea optio pariatur aperiam harum, est sapiente, quibusdam dolorum minus illo. Ea blanditiis beatae sequi eius quas dolorum veritatis deleniti eaque rerum quae asperiores vitae id, autem praesentium dolor voluptas, aut hic laborum quo, facilis reprehenderit? Sint unde exercitationem ut asperiores ipsam assumenda, ad quidem voluptatibus aspernatur nihil accusantium veniam laboriosam magnam porro maxime nobis animi quia repudiandae corporis dolorum culpa hic ipsa excepturi et?
+        </p>
+
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quos repellendus ex cupiditate minima id cum perferendis ratione architecto vel? Cupiditate aliquam explicabo dolorum dolor expedita dolores sint et impedit.
+
+            <ul>
+                <li>Detail 1</li>
+                <li>Detail 2</li>
+                <li>Detail 3</li>
+                <li>Detail 4</li>
+            </ul>
+
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur a ducimus, recusandae voluptate odio voluptatibus veritatis libero nemo. Earum, nemo eaque. Accusamus dicta nostrum minima corrupti necessitatibus voluptatem blanditiis saepe sed. Tempora maiores, nostrum similique quod doloremque reiciendis recusandae rerum?
+        </p>
+    </div>
+
+    <div>
+        <h3>Helpful Stuff</h3>
+
+        <ul class="box-list">
+            <a href="#"><li>Thing 1</li></a>
+            <a href="#"><li>Thing 2</li></a>
+            <a href="#"><li>Thing 3</li></a>
+        </ul>
+
+        <br>
+        <h3>Social Media</h3>
+
+        <div class="social-media-squares">
+            <a href="#"><img src="{{ asset('img/instagram.png') }}" alt="Instagram"></a>
+            <a href="#"><img src="{{ asset('img/twitter.png') }}" alt="Twitter"></a>
+            <a href="#"><img src="{{ asset('img/facebook.png') }}" alt="Facebook"></a>
+        </div>
+
+        <hr>
+
+        <div class="login-buttons">
+            <a class="button red soft-shadow-bottom" href="{{ path('register') }}">Sign Up!</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

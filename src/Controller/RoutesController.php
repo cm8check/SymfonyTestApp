@@ -29,6 +29,30 @@ class RoutesController extends Controller
      */
     public function pricing()
     {
-        return $this->render("about.html.twig", array("navid" => 2));
+        return $this->render("pricing.html.twig", array("navid" => 2));
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact()
+    {
+        return $this->render("pricing.html.twig", array("navid" => 3));
+    }
+
+    /**
+     * @Route("/register", name="register")
+     */
+    public function register()
+    {
+        return $this->render("pricing.html.twig", array("navid" => 5));
+    }
+
+    /**
+     * @Route("/login", name="login")
+     */
+    public function login()
+    {
+        return $this->render("pricing.html.twig", array("navid" => 4));
     }
 }

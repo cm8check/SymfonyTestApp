@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Symfony App</title>
+        <title>SymfonyApp</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
         <!-- Fonts -->
@@ -16,7 +16,7 @@
 
         <div class="container">
             <header>
-                <h1>Symfony App</h1>
+                <h1>SymfonyApp</h1>
             </header>
         </div>
 
@@ -30,10 +30,10 @@
                     <span><a href="{{ path('index') }}">Home</a></span>
                     <span><a href="{{ path('about') }}">About</a></span>
                     <span><a href="{{ path('pricing') }}">Pricing</a></span>
-                    <span><a href="/contact">Contact</a></span>
+                    <span><a href="{{ path('contact') }}">Contact</a></span>
 
-                    <span class="float-right"><a href="/login">Login</a></span>
-                    <span class="float-right"><a href="/register">Register</a></span>
+                    <span class="float-right"><a href="{{ path('login') }}">Login</a></span>
+                    <span class="float-right"><a href="{{ path('register') }}">Register</a></span>
                 </div>
             </div>
         </nav>
@@ -43,6 +43,39 @@
                 {% block main %}{% endblock %}
             </main>
         </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <ul>
+                            <h3>Navigation</h3>
+
+                            <a href="{{ path('index') }}"><li>Home</li></a>
+                            <a href="{{ path('about') }}"><li>About</li></a>
+                            <a href="{{ path('pricing') }}"><li>Pricing</li></a>
+                            <a href="{{ path('contact') }}"><li>Contact</li></a>
+                            <a href="{{ path('login') }}"><li>Login</li></a>
+                            <a href="{{ path('register') }}"><li>Register</li></a>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Contact</h3>
+                        <p>
+                            +1 (123) 456-7890
+                            <br>
+                            email@symfonyapp.com
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>SymfonyApp</h3>
+                        <p>Copyright &copy; Nathaniel Krok 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <script src="{{ asset('scripts/main.js') }}"></script>
     </body>

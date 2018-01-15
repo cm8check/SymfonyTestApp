@@ -1,3 +1,87 @@
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    margin: auto;
+}
+
+.pricing-grid > div {
+    max-width: 350px;
+    border: 2px #a8a8a8 solid;
+    border-radius: 3px;
+    padding: 10px 15px 30px 15px;
+    text-align: center;
+}
+
+.pricing-grid .button {
+    background-color: #f1f1f1;
+    color: #3f3f3f;
+}
+
+.login-buttons {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 8px 12px;
+    background-color: #f6faff;
+    border: 1px solid #c8d4dd;
+    border-radius: 5px;
+    min-width: 200px;
+    text-decoration: none;
+    color: #f7f5f5;
+}
+
+.red {
+    background-color: #774e4e;
+    border-color: #664141;
+}
+
+.social-media-squares img {
+    max-width: 48px;
+    padding-right: 17px;
+
+    transition: 0.2s transform;
+}
+
+.social-media-squares img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.index-grid-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2em;
+}
+
+.box-list {
+    padding: 0px;
+}
+
+.box-list li {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: -1px;
+    background-color: #f6faff;
+    border: 1px solid #c8d4dd;
+    max-width: 300px;
+
+    transition: 0.2s;
+    transition-property: background-color, margin-left, padding-left;
+}
+
+.box-list li:hover {
+    background-color: #f1f5f8;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.box-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .banner {
     border-radius: 3px;
     background-color: #792f2f;
@@ -11,6 +95,40 @@
 
 main {
     margin-top: 40px;
+}
+
+footer {
+    background-color: #221f1f;
+    color: #cecece;
+    padding: 50px 0px;
+    margin-top: 100px;
+
+    /* background-color: #e6e6e6;
+    color: #646464; */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0px;
+}
+
+footer li {
+    padding-bottom: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: #f1f1f1;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
 }
 
 nav {
@@ -39,7 +157,7 @@ nav a:hover {
     display: none;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1000px) {
     #nav-links {
         overflow-y: hidden;
         max-height: 0px;
@@ -59,6 +177,16 @@ nav a:hover {
 
     #nav-dropdown-button {
         display: block;
+    }
+
+    .index-grid-wrapper, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        margin: 0px auto;
+        max-width: 350px;
     }
 }
 
@@ -83,7 +211,19 @@ nav a:hover {
 
 @media (min-width: 1200px) {
     .container {
-        width: 80%;
+        width: 1000px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1400px;
     }
 }
 
