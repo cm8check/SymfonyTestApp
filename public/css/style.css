@@ -11,11 +11,12 @@
     border-radius: 3px;
     padding: 10px 15px 30px 15px;
     text-align: center;
+    background-color: #dee1e4;
 }
 
 .pricing-grid .button {
-    background-color: #f1f1f1;
-    color: #3f3f3f;
+    background-color: #93a162;
+    border-color: #7b8f55;
 }
 
 .login-buttons {
@@ -27,7 +28,7 @@
     background-color: #f6faff;
     border: 1px solid #c8d4dd;
     border-radius: 5px;
-    min-width: 200px;
+    min-width: 70px;
     text-decoration: none;
     color: #f7f5f5;
 }
@@ -35,6 +36,16 @@
 .red {
     background-color: #774e4e;
     border-color: #664141;
+}
+
+.yellow {
+    background-color: #77734e;
+    border-color: #656641;
+}
+
+.green {
+    background-color: #93a162;
+    border-color: #7b8f55;
 }
 
 .social-media-squares img {

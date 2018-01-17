@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<h1>Contact Us</h1>
+
+<p>
+    <strong>Phone:</strong>
+    <br>
+    +1 (123) 456-7890
+</p>
+
+<p>
+    <strong>Email:</strong>
+    <br>
+    email@symfonyapp.com
+</p>
+
+<hr>
+
+<h2>Contact Form</h2>
+
+<form method="POST" action="{{ path('contactFormPost') }}" accept-charset="UTF-8">
+    <label for="name">Name</label>
+    <input class="form-field" placeholder="Name" name="name" type="text" value="" id="name">
+
+    <label for="body">Body</label>
+    <textarea class="form-textarea" placeholder="Message Body" name="body"></textarea>
+
+    <input class="button green" type="submit" value="Submit">
+</form>
+{% endblock %}

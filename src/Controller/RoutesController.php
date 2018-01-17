@@ -37,7 +37,7 @@ class RoutesController extends Controller
      */
     public function contact()
     {
-        return $this->render("pricing.html.twig", array("navid" => 3));
+        return $this->render("contact.html.twig", array("navid" => 3));
     }
 
     /**
