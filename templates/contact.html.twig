@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends "base.html.twig" %}
 
 {% block main %}
 <h1>Contact Us</h1>
@@ -19,13 +19,25 @@
 
 <h2>Contact Form</h2>
 
-<form method="POST" action="{{ path('contactFormPost') }}" accept-charset="UTF-8">
-    <label for="name">Name</label>
-    <input class="form-field" placeholder="Name" name="name" type="text" value="" id="name">
+{{ form_start(form) }}
+    <div id="contact-email-field">
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email, {"attr": {"placeholder": "Email"}}) }}
+        {{ form_errors(form.email) }}
+    </div>
 
-    <label for="body">Body</label>
-    <textarea class="form-textarea" placeholder="Message Body" name="body"></textarea>
+    <div>
+        {{ form_label(form.name) }}
+        {{ form_widget(form.name, {"attr": {"placeholder": "Name"}}) }}
+        {{ form_errors(form.name) }}
+    </div>
 
-    <input class="button green" type="submit" value="Submit">
-</form>
+    <div>
+        {{ form_label(form.body) }}
+        {{ form_widget(form.body, {"attr": {"placeholder": "Body"}}) }}
+        {{ form_errors(form.body) }}
+    </div>
+
+    <input class="submit button green" type="submit" value="Submit">
+{{ form_end(form) }}
 {% endblock %}

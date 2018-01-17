@@ -5,6 +5,14 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+
+use App\Util\Forms;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Length;
 
 class RoutesController extends Controller
 {
@@ -35,9 +43,29 @@ class RoutesController extends Controller
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact()
+    public function contact(Request $request)
     {
-        return $this->render("contact.html.twig", array("navid" => 3));
+        $form = $this->createFormBuilder()
+            ->add("email", EmailType::class, array(
+                "constraints" => array(new Length(array('min' => 6)))
+            ))
+            ->add("name", TextType::class, array(
+                "constraints" => array(new Length(array('min' => 3)))
+            ))
+            ->add("body", TextareaType::class, array(
+                "constraints" => array(new Length(array('min' => 10)))
+            ))
+            ->getForm();
+        
+        if ($request->getMethod() == "POST") {
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+                $data = $form->getData();
+            }
+        }
+
+        return $this->render("contact.html.twig", array("navid" => 3, "form" => $form->createView()));
     }
 
     /**
